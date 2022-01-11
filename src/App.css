@@ -1,0 +1,246 @@
+body {
+  background-color: #fafafa;
+}
+
+.main__container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 150px;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.first__container {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+  padding: 20px;
+  width: 350px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(219, 219, 219, 1);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.second__container {
+  margin-top: 24px;
+  display: flex;
+  border: solid 2px black;
+  padding: 10px;
+  width: 350px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(219, 219, 219, 1);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+}
+.facebook__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facebook__container p {
+  font-size: 16px;
+  color: #4267b2;
+  font-weight: bold;
+  font-family: "Freight";
+}
+.forgot__password {
+  font-size: 12.5px;
+  color: #00376b;
+}
+.password {
+  font-size: 12.5px;
+  color: #00376b;
+}
+
+.facebook__image {
+  height: 30px;
+  width: 30px;
+  padding-right: 12px;
+}
+
+.third__container {
+  text-align: center;
+}
+.login__container,
+.second__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-button a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0095f6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.form__container .form p {
+  color: red;
+}
+
+@font-face {
+  font-family: "LogoFont";
+  src: url("./logo-font.otf");
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("./freight-sans.otf");
+}
+
+@font-face {
+  font-family: "FreightLight";
+  src: url("./freight-sans-light.otf");
+}
+
+.logo__header {
+  font-family: "LogoFont";
+  margin: 24px auto 14px;
+  font-size: 40px;
+}
+
+.submit__button {
+  margin-top: 12px;
+  cursor: pointer;
+  font-family: "Freight";
+  font-size: 16px;
+  background-color: #0095f6;
+  color: white;
+  border: solid 1px #0095f6;
+  border-radius: 2px;
+  padding: 8px;
+}
+
+.submit__button[disabled] {
+  opacity: 0.5;
+}
+
+.input {
+  background-color: #fafafa;
+  margin-top: 12px;
+  border: 1px solid rgba(219, 219, 219, 1);
+  padding: 8px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.first__label {
+  position: absolute;
+  display: flex;
+  padding-left: 0px;
+  font-family: FreightLight;
+  font-size: 14px;
+  padding-left: 10px;
+  order: -1;
+  transform: translateY(22px);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.second__label {
+  position: absolute;
+  display: flex;
+  padding-left: 0px;
+  font-family: FreightLight;
+  font-size: 14px;
+  padding-left: 10px;
+  order: -1;
+  transform: translateY(78px);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.input:focus .first__label {
+  transform: translateY(-5px);
+  padding-left: 5px;
+}
+
+.filled + .first__label {
+  transform: translateY(-5px);
+  padding-left: 5px;
+}
+
+.input:focus .second__label {
+  transform: translateY(110px) !;
+  padding-left: 5px;
+}
+
+.filled + .second__label {
+  transform: translateY(50px);
+  padding-left: 5px;
+}
+.mid__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid__container p {
+  font-family: "Freight";
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+}
+hr {
+  width: 40%;
+  color: rgba(219, 219, 219, 0.2);
+}
+
+.profile__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile__container h1 {
+  padding-left: 12px;
+}
+
+.logout__button {
+  background-color: red;
+  color: white;
+  font-family: "Freight";
+  font-size: 30px;
+  font-weight: bold;
+  padding: 12px;
+  border: solid 2px red;
+  border-radius: 2px;
+}
+
+.logout__container {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form .terms {
+  font-size: 14px;
+  color: gray !important;
+}
+
+.first__container > p {
+  color: gray;
+  font-size: 22px;
+  font-family: "FReight";
+}
+
+.info__container {
+  padding-left: 22px;
+}
