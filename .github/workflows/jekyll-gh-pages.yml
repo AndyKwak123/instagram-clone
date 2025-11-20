@@ -28,7 +28,9 @@ jobs:
 
       # 4. Build the project
       - name: Build
-        run: npm run build   # Make sure your package.json has a build script
+        run: CI=false npm run build
+        
+        # Make sure your package.json has a build script
 
       # 5. Upload the build folder
       - name: Upload build artifact
