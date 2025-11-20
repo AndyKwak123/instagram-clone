@@ -1,4 +1,4 @@
-name: Deploy site to GitHub Pages
+name: Deploy Instagram Clone to GitHub Pages
 
 on:
   push:
@@ -13,26 +13,35 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. Checkout the code
       - uses: actions/checkout@v4
 
-      - name: Setup Node
+      # 2. Set up Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3. Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # 4. Build the project
       - name: Build
-        run: npm run build   # Make sure your package.json has this
+        run: npm run build   # Make sure your package.json has a build script
 
+      # 5. Upload the build folder
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist       # <-- change to your actual build folder (dist, build, or out)
+          path: ./dist       # <-- Change this if your build folder is different
+                              # Vite/Hydrogen: dist
+                              # CRA: build
+                              # Next.js static export: out
 
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
     steps:
+      # 6. Deploy to GitHub Pages
       - uses: actions/deploy-pages@v4
