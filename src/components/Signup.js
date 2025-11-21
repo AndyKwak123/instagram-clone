@@ -2,7 +2,7 @@ import { setUserProperties } from "firebase/analytics";
 import React, { useRef, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import image from "../images/login-image.jpg";
+import image from "../images/login.jpg";
 import ios from "../images/ios-app.jpg";
 import android from "../images/android-app.jpg";
 import facebook from "../images/facebook.png";
