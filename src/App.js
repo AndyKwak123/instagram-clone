@@ -5,13 +5,14 @@ import Profile from "./components/Profile.js";
 import Login from "./components/Login.js";
 import { AuthProvider } from "./contexts/AuthContext";
 import { useAuth } from "./contexts/AuthContext";
+import { HashRouter } from "react-router-dom";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const { currentUser } = useAuth();
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Routes>
           {currentUser ? (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/" element={<Login />} />
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
